@@ -5,8 +5,9 @@
 ### 2.1 range函数
 
 - 语法：range(start,end,step= 1)  /range(end)
-  - 可迭代(interable)与for联用
-
+  
+- 可迭代(interable)与for联用
+  
 - while循环
 
   - 语法：
@@ -130,7 +131,7 @@
 
 ### 2.5 自定义函数
 
-~~~
+~~~python
 # 关键字——def
 # 语法：def function_name（函数名）([arguement]（内部参数可选）):
 # '''docstring''' 用于介绍函数的功能
@@ -143,6 +144,80 @@
 
 
 # 使用 lambda 匿名函数
+#无return，无需取名，简洁
+# 调用
 
 ~~~
+
+### 2.6 递归
+
+~~~
+# 汉诺塔  ？？？
+# 生成斐波那契数列
+# 递归出口  调用原始内容副本
+#递归效率低于循环（用于，找不到循环的关系）？？？
+## 加法模拟乘法！
+## 将数字转化为二进制
+~~~
+
+### 2.7 变量作用域
+
+- 全局变量：程序代码主体部分
+
+- 局部变量：函数主题内
+
+  - 全局和局部同名-遵循一个原则：内层屏蔽外层！
+
+  - ~~~python
+    def f(x):
+    	global a
+    	print(a)
+    	a = 5
+    	print(x+a)
+    a = 3
+    f(8)
+    print(a)
+    ~~~
+
+### 拓展
+
+- 库:
+
+  - 数据计算：math\os\random\datetime
+
+  - ~~~python
+    # eg:
+    import mokuai
+    dir(mokuai) # 查看模块下的函数！
+    help(mokuai.hanshu)
+    
+    #random
+    import random
+    random.int(1,100)
+    random.randrange(1,10,2)
+    random.random()
+    random.uniform(5,10)
+    random.sample(range(1000),10)
+    random.shuffle(a#a 是一个已经给定的列表)# 抽签-打乱列表顺序，生成新的列表
+                   
+    # datetime 
+    import datetime
+    from datetime import *
+    >>> dt = datetime.now()
+    >>> dt
+    datetime.datetime(2019, 10, 28, 20, 59, 59, 970154)
+    >>> print(dt.strftime('%a %b, %d, %Y, %H:%M'))
+    Mon Oct, 28, 2019, 20:59
+    # 时间戳 1970.1.1.0.0.0开始计时！
+    ~~~
+
+  - 
+
+
+
+
+
+
+
+
 
