@@ -59,3 +59,39 @@ a_sum,a_difference = sum_and_difference(15,5)
 
 ~~~
 
+
+
+
+
+## Q：如何输出字典中value值大于某个值的items？
+
+- A
+
+~~~python
+# 使用if else语句：
+# 两个空的list分别装重复，不重复的name
+for name in google_data_list:
+	if name in unique_app:
+		duplicate_app.append(name)
+    else:
+        unique_app.append(name)
+
+~~~
+
+
+
+### 增加计数器控制容错率
+
+~~~python
+def function():
+    f_name = 0
+    for loop:
+    	if "taiojian":
+        	f_name += 1
+"""第二个判断位置和 for 条件并列！"""
+	if 'taiojian2':
+        return Fale/True
+    return False/True
+
+~~~
+
