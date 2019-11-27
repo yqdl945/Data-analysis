@@ -231,3 +231,13 @@ elapsed = (time.clock() - start)
 print("Time used:",elapsed)
 ~~~
 
+## OOP
+
+~~~python
+CLASS
+实例化
+
+~~~
+
+
+
