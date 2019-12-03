@@ -76,6 +76,9 @@ for name in google_data_list:
     else:
         unique_app.append(name)
 
+# 数字不可以作为字典的key
+key = 10
+dict[key] = xx 不可以！
 ~~~
 
 
@@ -235,9 +238,42 @@ print("Time used:",elapsed)
 
 ~~~python
 CLASS
+	https://blog.csdn.net/CLHugh/article/details/75000104
 实例化
 
 ~~~
 
+## 批量解除注释
 
+~~~python
+ctr + /
+~~~
+
+## class解读
+
+~~~python
+https://blog.csdn.net/fengxinlinux/article/details/77091914
+~~~
+
+
+
+## datetime注意点：
+
+~~~python
+import datetime as dt
+
+# 用''将格式化的内容转化为字符串，H和M之间没有空格！
+date_format = '%m/%d/%y %H:%M'
+
+
+time = dt.datetime.strptime(date, date_format).strftime("%H")
+~~~
+
+
+
+## 起始值比对：
+
+~~~python
+startswith   （拼写）
+~~~
 
