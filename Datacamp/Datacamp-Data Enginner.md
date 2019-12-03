@@ -70,3 +70,49 @@ print(np.corrcoef(array[:,0],array[:,1]))
 
 ### 连接SQL 了？
 
+
+
+
+
+### Pandas
+
+~~~python
+#1 头部
+df.head()
+
+#2 尾部
+df.tail()
+
+#3 概览
+df.info()
+
+#4 将df 中的值提取出来
+df.values
+
+#5 使用zip构建字典
+dict_name={k:v for k,v in zip(range(1,len(names)+1),names) }
+
+#6 读取CSV文件
+df1 = pd.read_csv(wenjanming )	#文件名不需要加引号！
+
+#7 箱型图 同一张表中
+df[cols].plot(kind = 'box',subplots =True )	#subplots:子图
+
+#8 df 观测中某一列数据时写法
+df.xx.median()	#xx是具体的某一个column名称，且不需要使用''！
+#9 输出Enginner最小值？
+print(df["Engineering"].min())
+'''
+Print summary statistics of the 'fare' column of df with .describe() and print(). Note: df.fare and df['fare'] are equivalent.
+'''
+#10 新式绘图——箱型图
+years = ['1800','1850','1900','1950','2000']
+df[years].plot(kind='box')
+
+#11 条件输出提取
+As an example, you can extract the rows that contain 'US' as the country of origin using df[df['origin'] == 'US'].
+
+#12 仅访问条件行——df.loc[]
+us = df.loc[df['origin'] == 'US']	# 输入错误！
+~~~
+
