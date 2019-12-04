@@ -116,3 +116,48 @@ As an example, you can extract the rows that contain 'US' as the country of orig
 us = df.loc[df['origin'] == 'US']	# 输入错误！
 ~~~
 
+**df.loc[]和df.iloc[]区别**
+
+~~~python
+import pandas as pd
+from pandas import DataFrame
+s = pd.DataFrame([['data',1],['beta',2],['series',3]],index = [1,2,3],columns = ['name','number'])
+
+iloc[number]	#输出——index = number
+loc[number]		#index = number-1
+
+# 提取文本应使用loc
+~~~
+
+
+
+#### datetime
+
+~~~python
+pd.datetime()
+
+my_datetimes = pd.to_datetime(date_list, format=time_format)  
+# 提取一段时间
+ts1 = ts0.loc['2010-10-11 21:00:00':'2010-10-11 22:00:00']
+
+# 重新取样
+august_highs = august.resample('D').max()	#.mean() 可以更改
+
+# 将时间改为美国中部时间
+times_tz_central = times_tz_none.dt.tz_localize('US/Central')
+~~~
+
+### 数据清洗
+
+~~~python
+# 设置DataFrame的index
+df_clean = df_dropped.set_index(date_times)
+~~~
+
+~~~python
+# Select the visibility and dry_bulb_faren columns and resample them: weekly_mean
+weekly_mean = df_clean[['visibility','dry_bulb_faren']].resample('W').mean()
+~~~
+
+
+
