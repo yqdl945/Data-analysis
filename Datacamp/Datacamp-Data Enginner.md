@@ -74,7 +74,7 @@ print(np.corrcoef(array[:,0],array[:,1]))
 
 
 
-### Pandas
+### Pandas Foundations
 
 ~~~python
 #1 头部
@@ -159,5 +159,38 @@ df_clean = df_dropped.set_index(date_times)
 weekly_mean = df_clean[['visibility','dry_bulb_faren']].resample('W').mean()
 ~~~
 
+### pandas 数分流程
 
+~~~python
+# 1 数据读取与清洗
+	# Re-assigning column names——重置columns
+	df.drop(待丢弃的columns,想更换的column)
+
+	# 清洗数据：清洗数据列
+	使用df.loc['切片/提取']
+# 2 统计学观测
+	数据切片+命令链
+	方差
+	数据提取（df[True/False_list]
+	#提取特定列中包含目标的数据
+	is_sky_overcast = df_clean['sky_condition'].str.contains('OVC')
+# 3可视化观测Visual exploratory data analysis
+	相关系数——数据集.corr()
+	
+	#   Calculate the number of sunny hours per day
+		sunny_hours = resampled.sum()
+
+	#   Calculate the number of measured hours per day
+		total_hours = resampled.count()
+~~~
+
+
+
+### Introduction to Matplotlib
+
+~~~
+#绘图——X，Y轴参数	
+	ax.plot(seattle_weather["MONTH"],seattle_weather['MLY-PRCP-NORMAL'])
+#
+~~~
 
